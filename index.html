@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Papel Piedras Tijeras</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+    }
+    .container{
+        width: 700px;
+        position: fixed;
+        bottom: 20px;
+        right: 0%;
+        left: 25%;
+        display: flex;
+        gap: 20px;
+        
+    }
+    .card{
+        width: 20rem;
+        -webkit-box-shadow: 8px 7px 9px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 8px 7px 9px -7px rgba(0,0,0,0.75);
+box-shadow: 8px 7px 9px -7px rgba(0,0,0,0.75);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+    }
+    .card:hover{
+        top: -30px;
+        transform: scaleY(0.7);
+        transition: ease-in 0.3s;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card" id="papel">
+            <div class="image-1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuvcpiXQcemNC98d5GqlzDrGEBHtKS5FEUpw&usqp=CAU" alt="papel" height="200px">
+            </div>
+            <div class="information-1">
+                <p>Papel</p>
+            </div>
+        </div>
+        <div class="card" id="piedra">
+            <div class="image-2">
+                <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            <div class="information-2">
+                <p>Piedras</p>
+            </div>
+        </div>   <div class="card" id="tijera">
+            <div class="image-3">
+                <img src="data:image/png;base64,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" alt="tijeras">
+            </div>
+            <div class="information-3">
+                <p>Tijeras</p>
+            </div>
+        </div>
+    </div>
+   
+    <script src="app.js"></script>
+</body>
+</html>
