@@ -19,13 +19,13 @@ function choiceOption(option) {
         let texto = document.createTextNode("La maquina escogio Tijera, ¡Perdiste!");
         winnerDOM.innerHTML = "";
        winnerDOM.appendChild(texto) 
-       winnerDOM.appendChild(papel.cloneNode(true)) 
+       winnerDOM.appendChild(tijera.cloneNode(true)) 
     }
     if(option === "papel" && choice === "piedra"){
         let texto = document.createTextNode("La maquina escogio Piedra, ¡Felicitaciones Ganaste!");
         winnerDOM.innerHTML = "";
         winnerDOM.appendChild(texto) 
-        winnerDOM.appendChild(papel.cloneNode(true)) 
+        winnerDOM.appendChild(piedra.cloneNode(true)) 
     }
     
     if(option === "piedra" && choice === "piedra"){
@@ -38,13 +38,13 @@ function choiceOption(option) {
         let texto = document.createTextNode("La maquina escogio Tijera, ¡Felicitaciones Ganaste!");
         winnerDOM.innerHTML = "";
         winnerDOM.appendChild(texto) 
-        winnerDOM.appendChild(piedra.cloneNode(true)) 
+        winnerDOM.appendChild(tijera.cloneNode(true)) 
     }
     if(option === "piedra" && choice === "papel"){
         let texto = document.createTextNode("La maquina escogio Papel, ¡Perdiste!");
         winnerDOM.innerHTML = "";
         winnerDOM.appendChild(texto) 
-        winnerDOM.appendChild(piedra.cloneNode(true)) 
+        winnerDOM.appendChild(papel.cloneNode(true)) 
     }
 
     if(option === "tijera" && choice === "tijera"){
@@ -57,13 +57,13 @@ function choiceOption(option) {
         let texto = document.createTextNode("La maquina escogio Papel, ¡Felicitaciones Ganaste!");
         winnerDOM.innerHTML = "";
         winnerDOM.appendChild(texto) 
-        winnerDOM.appendChild(tijera.cloneNode(true))
+        winnerDOM.appendChild(papel.cloneNode(true))
     }
     if(option === "tijera" && choice === "piedra"){
         let texto = document.createTextNode("La maquina escogio Piedra, ¡Perdiste!");
         winnerDOM.innerHTML = "";
         winnerDOM.appendChild(texto) 
-        winnerDOM.appendChild(tijera.cloneNode(true))
+        winnerDOM.appendChild(piedra.cloneNode(true))
     }
     
     //return random;
